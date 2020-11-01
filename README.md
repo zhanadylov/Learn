@@ -1,1 +1,0 @@
-# Learn everything in programming 
