@@ -10,12 +10,18 @@ const personalMovieDB = {
     private: false
 };
 
-const a = prompt('One of the last watched films?',''),
-      b = prompt('Your vote?',''),
-      c = prompt('One of the watched films?',''),
-      d = prompt('Your vote?','');
+for(let i = 0; i < 2; i++){
+    const a = prompt('One of the last watched films?',''),
+      b = prompt('Your vote?','');
 
-      personalMovieDB.movies[a] = b;
-      personalMovieDB.movies[c] = d;
-
+      if(a != null && b != null && a != '' && b != '' && a.length < 50){
+        personalMovieDB.movies[a] = b;
+        console.log.log("done");
+      }else{
+          console.log("error!");
+          i--;
+      }
+      
+}
       console.log(personalMovieDB);
+    
